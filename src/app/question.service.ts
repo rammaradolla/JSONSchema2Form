@@ -39,7 +39,16 @@ export class QuestionService {
       "value": "",
       "required": "true",
       "order": "2"
-    }
+    },
+    {
+      "key": "background-color",
+      "label": "Background Color",
+      "type": "color",
+      "class": "test-class",
+      "value": "",
+      "required": "true",
+      "order": "5"
+    },
   ]
     return schema;
   }
@@ -66,6 +75,7 @@ export class QuestionService {
 
         case 'text':
         case 'email':
+        case 'color':
           question =  new TextboxQuestion({
             key: element.key,
             type: element.type,
